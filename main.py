@@ -1,11 +1,6 @@
-from cgitb import text
-from importlib.resources import contents
-from pydoc import doc
-from shutil import ignore_patterns
-import sys, os
+import os
 import json
 import re
-from turtle import title
 import requests
 import bs4
 import docx
@@ -16,12 +11,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-from io import BytesIO
 import time
-
 import requests
-from docx import Document
-from docx.shared import Inches
 
 chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
