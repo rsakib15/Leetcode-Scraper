@@ -105,8 +105,8 @@ def main():
     if os.path.exists("problemset.docx"):
         document = docx.Document('problemset.docx')
     
-    if os.path.exists("problemsset.json"):
-        with open('problemsset.json', 'r') as f:
+    if os.path.exists("problemset.json"):
+        with open('problemset.json', 'r') as f:
             problemset = json.load(f)
 
     for i in range(1,49):
@@ -141,7 +141,7 @@ def main():
             problemset.append(problem)
     
     document.save("problemset.docx")
-    with open('problemsset.json', 'w') as f:
+    with open('problemset.json', 'w') as f:
         json.dump(problemset, f)
 
 main()
