@@ -13,6 +13,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import requests
+from io import BytesIO
 
 chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
@@ -113,7 +114,7 @@ def main():
         url = PROBLEMSET_BASE_URL + str(i)
         print("processing page: " + url)
         html = driver.get(url)
-        time.sleep(2)
+        time.sleep(5)
         html = driver.page_source
         soup = bs4.BeautifulSoup(html, "html.parser")
         table = soup.find("div", {"role": "rowgroup"})
